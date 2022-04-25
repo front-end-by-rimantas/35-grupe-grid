@@ -1,0 +1,43 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+}
+
+.grid {
+    font-size: 20px;
+    display: grid;
+    gap: 20px;
+    --col: 1;
+    grid-template-columns: repeat(var(--col), 1fr);
+    border: 1px solid red;
+}
+.grid > .cell {
+    border: 1px solid blue;
+}
+
+@media (min-width: 600px) {
+    .grid {
+        --col: 2;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid {
+        --col: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        --col: 4;
+    }
+}
